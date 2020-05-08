@@ -18,6 +18,8 @@ job('tomcat-installation-exam') {
 
 	ansiblePlaybook(
 	  playbook: '${WORKSPACE}/tomcat-install.yml',
+	  inventory: 'hosts'
+	  )
       }
     }
   }
