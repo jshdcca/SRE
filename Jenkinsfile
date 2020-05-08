@@ -1,4 +1,5 @@
-pipeline {
+p
+peline {
   agent {
     label 'master'
     }
@@ -7,7 +8,7 @@ pipeline {
       stage('run playbook') {
 	steps {
 	  dir("${env.WORKSPACE}"){
-	    sh 'ansible-playbook -i hosts tomcat-install.yml'
+	    sh 'ansible-playbook -i hosts tomcat-install.yml --user root'
 	  }
 	}
       }
