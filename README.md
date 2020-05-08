@@ -3,7 +3,7 @@
 # Tools used
 
   - Jenkins Pipeline (to iniate the job and for githooks)
-  - Ansible (to run the task(install tomcat)
+  - Ansible (to run the task(install tomcat))
 
 
 Notes:
