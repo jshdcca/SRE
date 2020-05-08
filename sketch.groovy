@@ -10,9 +10,15 @@ job('tomcat-installation-exam') {
       branch('master')
     }
   }
+  stages {
+    stage('run playbook') {
+      steps {
+	withEnv(["PATH+ANSIBLE"=${tool 'ansible-scm'}])
+	sh 'ansible --version'
 
-  steps {
-    // ansible-playbook tomcat-install.yml
+	ansiblePlaybook(
+	  playbook: '${WORKSPACE}/tomcat-install.yml',
+      }
+    }
   }
 }
-
