@@ -1,9 +1,5 @@
 # Tomcat Server Installation
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
 # Tools used
 
   - Jenkins Pipeline (to iniate the job and for githooks)
