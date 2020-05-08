@@ -1,0 +1,23 @@
+---
+  - name: install tomcat server
+    hosts: webserver
+    become: true
+
+    tasks:
+    - name: install java
+      apt:
+	name: java
+	state: latest
+
+    - name: download tomcat stuff
+      get_url: http://mirror.rise.ph/apache/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz
+      dest: /opt/
+
+    - name: extract da juice
+      unarchive:
+	src: /opt/apache-tomcat-8.5.54.tar.gz
+	dest: /opt/
+	remote_src: yes
+
+    - name: start tomcat
+      shell: nohup /opt/apache-tomcat-8.5.54/bin/startup.sh
