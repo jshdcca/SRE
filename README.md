@@ -20,3 +20,8 @@ To-do's:
 - convert to Jenkins Pipeline DSL
 - make install script flexible enough to do multiple installations.
 maybe pass some variables like <installation/path+$IT>
+
+# Some screenshots:
+[![N|Solid](https://i.imgur.com/hJmIRvE.png)]
+[![N|Solid](https://i.imgur.com/2eIDVBN.png)]
+[![N|Solid](https://i.imgur.com/sPCviTr.png)]
